@@ -1,0 +1,20 @@
+.buttonDelete {
+  margin-bottom: 5px;
+  color: #494949;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+
+  border: 1px solid #494949;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  margin-left: 25px;
+}
+
+.buttonDelete:hover {
+  color: #ffffff;
+  background: orangered;
+  border-color: orangered;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
