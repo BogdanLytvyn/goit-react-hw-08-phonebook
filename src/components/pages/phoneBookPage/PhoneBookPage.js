@@ -4,7 +4,7 @@ import Filter from '../../filter/Filter';
 import ContactList from '../../contactList/ContactList';
 import style from './Phonebook.module.css';
 import { connect } from 'react-redux';
-import { changeFilter } from '../../../redux/contacts/contuctsActions';
+import { changeFilter } from '../../../redux/contacts/contactsActions';
 import Loader from '../../loader/Loader';
 import { getLoading, getContacts, getFilter } from '../../../redux/contacts/contactsSelectors';
 

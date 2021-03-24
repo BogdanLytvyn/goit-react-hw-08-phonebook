@@ -3,17 +3,6 @@ import { connect } from 'react-redux';
 import { register } from '../../../redux/auth/authOperations';
 import styles from './RgisterPage.module.css';
 
-// const styles = {
-//   form: {
-//     width: 320,
-//   },
-//   label: {
-//     display: 'flex',
-//     flexDirection: 'column',
-//     marginBottom: 15,
-//   },
-// };
-
 class RegisterPage extends Component {
   state = {
     name: '',

@@ -35,10 +35,21 @@ const error = createReducer(null, {
   [getCurrentUserError]: setError,
 });
 
-const authtReucers = combineReducers({
+const isAtentiicted = createReducer(false, {
+  [registerSuccess]: () => true,
+  [loginSuccess]: () => true,
+  [getCurrentUserSuccess]: () => true,
+  [registerError]: () => false,
+  [loginError]: () => false,
+  [getCurrentUserError]: () => false,
+  [logoutSuccess]: () => false,
+});
+
+const authReducers = combineReducers({
   user,
+  isAtentiicted,
   token,
   error,
 });
 
-export default authtReucers;
+export default authReducers;

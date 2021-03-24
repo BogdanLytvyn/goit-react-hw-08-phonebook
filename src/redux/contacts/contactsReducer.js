@@ -11,7 +11,7 @@ import {
   fetchContactsSuccess,
   fetchContactsRequest,
   fetchContactsError,
-} from './contuctsActions';
+} from './contactsActions';
 
 const itemsReducer = createReducer([], {
   [fetchContactsSuccess]: (_, { payload }) => payload,
@@ -40,11 +40,11 @@ const loadingReducer = createReducer(false, {
 });
 const errorReducer = createReducer(null, {});
 
-const contactReucers = combineReducers({
+const contactReducers = combineReducers({
   items: itemsReducer,
   filter: filterReducer,
   loading: loadingReducer,
   error: errorReducer,
 });
 
-export default contactReucers;
+export default contactReducers;

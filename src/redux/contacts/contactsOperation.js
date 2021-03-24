@@ -1,7 +1,7 @@
 import axios from 'axios';
-import * as actions from './contuctsActions';
+import * as actions from './contactsActions';
 
-axios.defaults.baseURL = 'http://goit-phoneook-api.herokuapp.com';
+// axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.app.com';
 
 export const addContact = ({ name, number }) => async dispatch => {
   const contact = {

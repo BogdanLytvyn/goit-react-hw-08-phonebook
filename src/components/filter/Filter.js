@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../pages/phoneBookPage/Phonebook.module.css';
 import { connect } from 'react-redux';
-import { changeFilter } from '../../redux/contacts/contuctsActions';
+import { changeFilter } from '../../redux/contacts/contactsActions';
 import { getFilter } from '../../redux/contacts/contactsSelectors';
 
 const Filter = ({ value, onChangeFilter }) => {

@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { getIsAuthenticated } from '../../redux/auth/authSelectors';
 import style from './Navigation.module.css';
 
 const styles = {
@@ -15,7 +17,7 @@ const styles = {
   },
 };
 
-const Navigation = () => {
+const Navigation = ({ isAuthenticated }) => {
   return (
     <div className={style.nav}>
       <nav>
@@ -23,12 +25,18 @@ const Navigation = () => {
           <h5>Home</h5>
         </NavLink>
 
-        <NavLink to="/phonebook" exact style={styles.link} activeStyle={styles.activeLink}>
-          <h5 className={style.phonebook}>Phonebook</h5>
-        </NavLink>
+        {isAuthenticated && (
+          <NavLink to="/phonebook" exact style={styles.link} activeStyle={styles.activeLink}>
+            <h5 className={style.phonebook}>Phonebook</h5>
+          </NavLink>
+        )}
       </nav>
     </div>
   );
 };
 
-export default Navigation;
+const mapStateToProps = state => ({
+  isAuthenticated: getIsAuthenticated(state),
+});
+
+export default connect(mapStateToProps)(Navigation);
