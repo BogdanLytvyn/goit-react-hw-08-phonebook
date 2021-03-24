@@ -17,8 +17,7 @@ const itemsReducer = createReducer([], {
   [fetchContactsSuccess]: (_, { payload }) => payload,
   [addContactSuccess]: (state, { payload }) => [...state, payload],
   [deleteContactSuccess]: (state, { payload }) => {
-    const index = state.findIndex(({ id }) => id === Number(payload));
-    return [...state.slice(0, index), ...state.slice(index + 1)];
+    return [...state.filter(item => item.id.toString() !== payload.toString())];
   },
 });
 
